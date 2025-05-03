@@ -35,12 +35,12 @@ Once a module becomes stable, it will be merged into `axio-host` or `axio-dpu` f
 
 | Axio Component         | Module        | Description                                               | Status                                     |
 |------------------------|---------------|-----------------------------------------------------------|--------------------------------------------|
-| **Runtime**            | `CEIO`        | Cache-efficient, DPU-driven I/O runtime                   | Accepted at SIGCOMM'25<br>🛠️ Pending integration |
-|                        | `DCP`         | Disaggregated data/control-plane RDMA engine              | Accepted at SIGCOMM'25<br>🛠️ Pending integration |
-|                        | `RhyR`        | Congestion control for high-throughput I/O                | Accepted at APNet'25<br>🛠️ In development |
+| **Runtime**            | `CEIO`        | Cache-efficient, DPU-driven I/O runtime                   | Accepted by SIGCOMM'25<br>🛠️ Pending integration |
+|                        | `DCP`         | Disaggregated data/control-plane RDMA engine              | Accepted by SIGCOMM'25<br>🛠️ Pending integration |
+|                        | `RhyR`        | Congestion control for high-throughput I/O                | Accepted by APNet'25<br>🛠️ In development |
 | **Platform Express**   | `axio-bf3`     | Development framework for NVIDIA DOCA & BlueField-3      | 🛠️ In development                            |
 | **Library & Toolkit**  | `axio-emulator`| 400Gbps test loader and datapath emulator                | 🛠️ In development                            |
-|                        | `FuseLink`    | Multi-NIC GPU communication library                       | Accepted at OSDI'25<br>🛠️ Pending integration |
+|                        | `FuseLink`    | Multi-NIC GPU communication library                       | Accepted by OSDI'25<br>🛠️ Pending integration |
 
 
 ---
