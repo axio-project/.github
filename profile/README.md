@@ -20,7 +20,30 @@ It provides an integrated set of runtime engines, portable offloads, platform op
 
 ---
 
-## Project Layout (TBD)
+## Project Layout 
+As illustrated in the architecture overview, Axio spans across DPU, CPU, and GPU, and integrates a variety of features and components to enable a full-stack, high-performance network I/O system.
+
+We provide **two main repositories** for users to deploy the Axio system:
+- **`axio-host`**: Contains the user-space Axio libraries, encapsulates low-level integration with the DPU, and provides interfaces to third-party systems such as gRPC, Open vSwitch, NCCL, etc. This repository is intended to be deployed on the **host side** (CPU or GPU).
+- **`axio-dpu`**: Contains the Axio runtime, offload modules, and platform-level optimizations (Platform Express). This repository is intended to run on the **DPU side** (currently targeting **NVIDIA BlueField-3** only).
+
+To facilitate modular development and testing, we maintain each **Axio feature or function** in a separate repository. These standalone modules include minimal test infrastructure (e.g., integration with traffic generators or emulators) to allow contributors to develop and verify individual components independently, without needing the full Axio system.
+
+Once a module becomes stable, it will be merged into `axio-host` or `axio-dpu` for production use.
+
+### Current Modules
+
+For interested developers, we seperately maintain each feature/function of axio within an individual repository with basic testing (e.g., running with network load testers). This helps quickly develop each feature/function independently without being master of the whole system. When being stable, we will integrate them into axio-host or axio-dpu for real-world applications. We list these sub-repos as follows:
+
+| Axio Component         | Module        | Description                                               | Status                                     |
+|------------------------|---------------|-----------------------------------------------------------|--------------------------------------------|
+| **Runtime**            | `CEIO`        | Cache-efficient, DPU-driven I/O runtime                   | ✅ Accepted at SIGCOMM'25<br>🛠️ Pending integration |
+|                        | `DCP`         | Disaggregated data/control-plane RDMA engine              | ✅ Accepted at SIGCOMM'25<br>🛠️ Pending integration |
+|                        | `RhyR`        | Congestion control for high-throughput I/O                | ✅ Accepted at APNet'25<br>🛠️ In development |
+| **Platform Express**   | `axio-bf3`     | Development framework for NVIDIA DOCA & BlueField-3      | 🛠️ In development                            |
+| **Library & Toolkit**  | `axio-emulator`| 400Gbps test loader and datapath emulator                | 🛠️ In development                            |
+|                        | `FuseLink`    | Multi-NIC GPU communication library                       | ✅ Accepted at OSDI'25<br>🛠️ Pending integration |
+
 
 ---
 
