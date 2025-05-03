@@ -33,8 +33,6 @@ Once a module becomes stable, it will be merged into `axio-host` or `axio-dpu` f
 
 ### Current Modules
 
-For interested developers, we seperately maintain each feature/function of axio within an individual repository with basic testing (e.g., running with network load testers). This helps quickly develop each feature/function independently without being master of the whole system. When being stable, we will integrate them into axio-host or axio-dpu for real-world applications. We list these sub-repos as follows:
-
 | Axio Component         | Module        | Description                                               | Status                                     |
 |------------------------|---------------|-----------------------------------------------------------|--------------------------------------------|
 | **Runtime**            | `CEIO`        | Cache-efficient, DPU-driven I/O runtime                   | ✅ Accepted at SIGCOMM'25<br>🛠️ Pending integration |
