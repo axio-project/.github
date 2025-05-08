@@ -38,9 +38,9 @@ Once a module becomes stable, it will be merged into `axio-host` or `axio-dpu` f
 | **Runtime**            | `CEIO`        | Cache-efficient, DPU-driven I/O runtime                   | Accepted by SIGCOMM'25<br>🛠️ Pending integration |
 |                        | `DCP`         | Disaggregated data/control-plane RDMA engine              | Accepted by SIGCOMM'25<br>🛠️ Pending integration |
 |                        | `CARC`        | Congestion control for high-throughput I/O                | Accepted by APNet'25<br>🛠️ In development        |
-| **Platform Express**   | `axio-bf3-express`| An expressed NVIDIA DOCA / BlueField execution platform for axio projects   | 🛠️ In development          |
-| **Library & Toolkit**  | `axio-emulator`| Towards 400Gbps datapath test loader, emulator, and tuner for host network     | 🛠️ In development          |
-|                        | `FuseLink`     | Multi-NIC GPU communication library                      | Accepted by OSDI'25<br>🛠️ Pending integration    |
+| **Platform Express**   | [`axio-bf3-express`](https://github.com/axio-project/axio-bf3-express)| An expressed NVIDIA DOCA / BlueField execution platform for axio projects   | 🛠️ In development          |
+| **Library & Toolkit**  | [`axio-emulator`](https://github.com/axio-project/axio-emulator)| Towards 400Gbps datapath test loader, emulator, and tuner for host network     | 🛠️ In development          |
+|                        | [`FuseLink`](https://github.com/axio-project/FuseLink)     | Multi-NIC GPU communication library                      | Accepted by OSDI'25<br>🛠️ Pending integration    |
 
 
 ---
